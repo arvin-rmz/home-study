@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '@/styles/Home.module.css';
+import Button from '@/components/ui/button/button';
+import HeroSection from '@/components/hero-section/hero-section';
 
 export default function Home() {
   return (
@@ -21,7 +23,7 @@ export default function Home() {
         />
       </Head>
       <main>
-        <h1>Hello Word !</h1>
+        <HeroSection />
       </main>
     </>
   );

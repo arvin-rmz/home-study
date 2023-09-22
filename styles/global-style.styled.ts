@@ -1,3 +1,9 @@
+import { createGlobalStyle } from 'styled-components';
+import { NextFont } from 'next/dist/compiled/@next/font';
+
+export default createGlobalStyle<{
+  localRobotoFont: NextFont;
+}>`
 html,
 body,
 div,
@@ -135,3 +141,13 @@ img {
 button {
   cursor: pointer;
 }
+
+
+body {
+  font-family: ${({ localRobotoFont }) =>
+    localRobotoFont.style.fontFamily} !important;
+}
+
+
+
+`;
