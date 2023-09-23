@@ -37,10 +37,10 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* <link
-            rel="icon"
-            href="/images/a-plus-logo-dark.svg"
-          /> */}
+          <link
+            rel='icon'
+            href='home-study-logo.png'
+          />
         </Head>
 
         <body>

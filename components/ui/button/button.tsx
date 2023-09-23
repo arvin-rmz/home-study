@@ -1,5 +1,6 @@
 import React from 'react';
 import { Variants } from 'framer-motion';
+import Image from 'next/image';
 
 import {
   StyledButton,
@@ -12,15 +13,43 @@ export const buttonVariants: Variants = {
   hover: { scale: 1.2 },
 };
 
-const Button = () => {
+export enum ButtonSize {
+  sm = 'small',
+  md = 'medium',
+  lg = 'large',
+}
+
+export interface ButtonProps {
+  text: string;
+  icon?: string;
+  color?: string;
+  size?: ButtonSize;
+}
+
+const Button: React.FC<ButtonProps> = ({ text, icon, color, size }) => {
   return (
-    <StyledButtonWrapper
-      variants={buttonVariants}
-      animate='animate'
-      whileHover={'hover'}
-      whileTap={'tap'}
-    >
-      <StyledButton>Join Us</StyledButton>
+    <StyledButtonWrapper>
+      <StyledButton
+        color={color}
+        size={size}
+        variants={buttonVariants}
+        animate='animate'
+        whileHover={'hover'}
+        whileTap={'tap'}
+      >
+        {icon && (
+          <span>
+            <Image
+              src={icon}
+              alt={text}
+              width={25}
+              height={34}
+            />
+          </span>
+        )}
+
+        {text}
+      </StyledButton>
     </StyledButtonWrapper>
   );
 };
