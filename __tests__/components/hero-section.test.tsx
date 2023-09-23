@@ -1,5 +1,6 @@
 import { expect, it, vi } from 'vitest';
 import { screen } from '@testing-library/react';
+
 import { renderHeroSectionWithProviders } from '@/__tests__/utils/render-utils';
 
 it('shows correct heading text, icons and "Join Us" button', () => {
@@ -13,10 +14,16 @@ it('shows correct heading text, icons and "Join Us" button', () => {
   const starsLogo = screen.getByRole('img', { name: /stars/i });
   const homeLogo = screen.getByRole('img', { name: /home/i });
   const joinUsBtn = screen.getByRole('button', { name: /join us/i });
+  const exploreCoursesBtn = screen.getByRole('button', {
+    name: /explore courses/i,
+  });
+  const browsePostsBtn = screen.getByRole('button', { name: /browse posts/i });
 
   expect(heading).toBeInTheDocument();
   expect(unlockLogo).toBeInTheDocument();
   expect(starsLogo).toBeInTheDocument();
   expect(homeLogo).toBeInTheDocument();
   expect(joinUsBtn).toBeInTheDocument();
+  expect(exploreCoursesBtn).toBeInTheDocument();
+  expect(browsePostsBtn).toBeInTheDocument();
 });

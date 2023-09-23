@@ -10,7 +10,7 @@ import {
   StyledHeroSection,
   TextContainer,
   UnlockIconWrapper,
-} from '@/styles/components/hero-section/hero-section.styled';
+} from '@/styles/components/hero-section.styled';
 import { defaultTheme } from '@/styles/theme/default.theme';
 
 const HeroSection: React.FC = () => {

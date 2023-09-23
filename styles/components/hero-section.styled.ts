@@ -1,7 +1,6 @@
 import { styled } from 'styled-components';
 
 export const StyledHeroSection = styled.section`
-  text-align: center;
   position: relative;
   padding: 3rem 0;
   min-height: 100vh;
@@ -17,11 +16,12 @@ export const TextContainer = styled.div`
   flex: 1;
   max-width: 90%;
   margin: 0 auto;
+  text-align: center;
 
   color: ${({ theme }) => theme.colors.textLight};
 
   & h1 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     font-weight: 600;
     line-height: 1.2;
     margin-top: 10%;

@@ -1,5 +1,7 @@
 import Head from 'next/head';
+
 import HeroSection from '@/components/hero-section/hero-section';
+import Header from '@/components/header/header';
 
 export default function Home() {
   return (
@@ -15,6 +17,9 @@ export default function Home() {
           content='width=device-width, initial-scale=1'
         />
       </Head>
+
+      <Header />
+
       <main>
         <HeroSection />
       </main>
