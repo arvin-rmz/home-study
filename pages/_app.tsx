@@ -3,13 +3,13 @@ import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '@/styles/global-style.styled';
 import { myLocalRobotoFont } from '@/utils/helpers/get-local-fonts';
-import { defaultTheme } from '@/styles/theme/default.theme';
+import { theme } from '@/styles/theme/theme';
 
 const nextLocalRobotoFont = myLocalRobotoFont;
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle localRobotoFont={nextLocalRobotoFont} />
 
       <Component {...pageProps} />
