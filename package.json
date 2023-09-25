@@ -26,12 +26,8 @@
     "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.4",
-    "babel-plugin-styled-components": "^2.1.4",
     "jsdom": "^22.1.0",
     "typescript": "^5.2.2",
     "vitest": "^0.34.5"
-  },
-  "resolutions": {
-    "styled-components": "^5"
   }
 }

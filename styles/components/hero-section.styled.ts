@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import styled from 'styled-components';
 
 export const StyledHeroSection = styled.section`
   position: relative;
@@ -6,10 +6,24 @@ export const StyledHeroSection = styled.section`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  gap: 0rem;
 
-  & > img {
-    z-index: -1;
+  background: url('../../images/backgrounds/hero-section-mobile.jpg') no-repeat
+    center / cover;
+
+  @media (orientation: landscape) {
+    background: url('../../images/backgrounds/hero-section-desktop.jpg')
+      no-repeat center / cover;
+
+    justify-content: space-around;
   }
+
+  /* @media (orientation: landscape) and (min-width: 768px) {
+    background: url('../../images/backgrounds/hero-section-desktop.jpg')
+      no-repeat center / cover;
+
+    justify-content: space-around;
+  } */
 `;
 
 export const TextContainer = styled.div`
@@ -31,6 +45,10 @@ export const TextContainer = styled.div`
     font-size: 3rem;
 
     color: ${({ theme }) => theme.colors.accent};
+  }
+
+  @media (orientation: landscape) {
+    flex: 0;
   }
 `;
 
