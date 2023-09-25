@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTheme } from 'styled-components';
 
 import Button, { ButtonSize } from '../ui/button/button';
 import {
@@ -11,17 +12,12 @@ import {
   TextContainer,
   UnlockIconWrapper,
 } from '@/styles/components/hero-section.styled';
-import { defaultTheme } from '@/styles/theme/default.theme';
 
 const HeroSection: React.FC = () => {
+  const theme = useTheme();
+
   return (
     <StyledHeroSection>
-      <Image
-        src='/images/backgrounds/hero-section-mobile.jpg'
-        alt='Hero Section Background'
-        fill
-      />
-
       <TextContainer>
         <h1>
           Unlock Your Future
@@ -68,14 +64,14 @@ const HeroSection: React.FC = () => {
           text='Explore Courses'
           icon='/images/icons/explore-courses.png'
           size={ButtonSize.md}
-          color={defaultTheme.colors.secondary}
+          color={theme.colors.secondary}
         />
 
         <Button
           text='Browse Posts'
           icon='/images/icons/browse-posts.png'
           size={ButtonSize.md}
-          color={defaultTheme.colors.accent}
+          color={theme.colors.accent}
         />
       </ButtonsWrapper>
     </StyledHeroSection>

@@ -19,6 +19,7 @@ const Header: React.FC = () => {
             alt='Home Study Logo'
             width={175}
             height={44}
+            priority
           />
         </Link>
       </LogoWrapper>
